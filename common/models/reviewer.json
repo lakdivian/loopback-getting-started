@@ -1,31 +1,17 @@
 {
-  "name": "CoffeeShop",
-  "base": "PersistedModel",
+  "name": "Reviewer",
+  "base": "User",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {
-    "name": {
-      "type": "string",
-      "required": true
-    },
-    "city": {
-      "type": "string",
-      "required": true
-    }
-  },
+  "properties": {},
   "validations": [],
   "relations": {
     "reviews": {
       "type": "hasMany",
       "model": "Review",
-      "foreignKey": ""
-    },
-    "reviewers": {
-      "type": "hasMany",
-      "model": "Reviewer",
-      "foreignKey": ""
+      "foreignKey": "publisherId"
     }
   },
   "acls": [
